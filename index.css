@@ -1,0 +1,318 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {font-size: 3.5em;}
+h2 {font-size: 2.7em;}
+h3 {font-size: 2em;}
+p {font-size: 1.25em;}
+ul {list-style: none;}
+li {font-size: 1.25em;}
+
+:root {
+    --custom-color-white_custom: rgba(245,245,245,1);
+    --custom-color-purple_custom: rgb(138, 43, 226);
+}
+
+
+button {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 15px;
+    border: 2px solid rgba(0,0,0,0.5);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    color: white;
+    background-color: var(--custom-color-purple_custom);
+}
+button:hover {
+    background-color: rgb(101, 33, 165);
+}
+
+.color-acento {
+    color: var(--custom-color-purple_custom);
+}
+
+.container {
+    max-width: 1400px;
+    margin: auto;
+}
+
+header {
+    background-color: var(--custom-color-white_custom);
+}
+
+header .logo {
+    margin: 0;
+    padding: 25px 30px;
+    font-weight: bold;
+    color: var(--custom-color-purple_custom);
+    font-size: 1.6em;
+}
+
+header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+#xd {
+    color: palevioletred;
+    opacity: 0;
+    transition: 0.7s;
+}
+
+header a {
+    padding: 7px 12px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition-property: padding, color, margin-left;
+    transition-duration: 0.4s, 0.5s, 0.5s;
+}
+
+
+
+
+
+header a:last-child {
+    margin-left: 115px;
+}
+
+header a:hover {
+    color: var(--custom-color-purple_custom);
+    padding: 13px 12px;
+}
+
+header a:last-child:hover {
+    margin-left: 0;
+    color: orangered;
+}
+
+header a:hover > #xd {
+    opacity: 1;
+}
+
+
+#hero {
+    background-image: linear-gradient(0deg, rgba(0,0,0,0.9), rgba(0,0,0,0.4))
+    ,url('media/hero.jpg');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    color: white;
+    text-shadow: 2px 2px 20px black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#hero button {
+    font-size: 1.75em;
+}
+
+#somos-proya .container {
+    background: #fff;
+    text-align: center;
+    padding: 200px 12px;
+}
+
+#nuestros-programas {
+    background-color: rgb(30,30,30);
+    color: white;
+    text-align: center;
+}
+
+#nuestros-programas .container {
+    padding: 150px 12px;
+}
+
+#nuestros-programas h2 {
+    margin-top: 0;
+    font-size: 3em;
+}
+
+#nuestros-programas p {
+    display: none;
+}
+
+#nuestros-programas .carta {
+    background-position: center;
+    padding: 50px;
+    margin: 20px;
+    border-radius: 15px;
+}
+
+.carta:first-child {
+    background-image: linear-gradient(0deg, rgba(0,0,0,1), rgba(0,0,0,0.7))
+    ,url('media/front-end.jpg');
+}
+
+.carta:nth-child(2) {
+    background-image: linear-gradient(0deg, rgba(0,0,0,1), rgba(0,0,0,0.7))
+    ,url('media/full-stack.jpg');
+}
+
+.carta:last-child {
+    background-image: linear-gradient(0deg, rgba(0,0,0,1), rgba(0,0,0,0.7))
+    ,url('media/python.jpg');
+}
+
+#caracteristicas .container {
+    text-align: center;
+    padding: 200px 12px;
+}
+
+#caracteristicas li {
+    margin: 16px 0px;
+    font-weight: bold;
+}
+
+.final {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(30, 30, 30);
+    color: white;
+    height: 80vh;
+}
+
+
+.final h2 {
+    font-size: 8vw;
+}
+
+.final button {
+    font-size: 5.5vw;
+}
+
+footer {
+    background-color: rgb(230, 230, 230);
+}
+
+footer .container {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+footer p {
+    margin: 0;
+    color: rgb(100, 100, 100);
+    padding: 12px;
+}
+
+
+@media screen and (min-width: 720px) {
+
+header {
+    position: fixed;
+    width: 100%;
+}
+
+header .container {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+header nav {
+    flex-direction: row;
+    padding-bottom: 0;
+}
+
+header a {
+    padding: 4px 12px;
+}
+
+header a:hover {
+    padding: 0px 24px;
+}
+
+header a:last-child {
+    margin-left: 0;
+}
+
+#hero h1 {
+    font-size: 4.3em;
+}
+
+#somos-proya .container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#somos-proya .texto {
+    text-align: initial;
+    width: 50%;
+    padding: 0 30px;
+    max-width: 600px;
+}
+
+#somos-proya p {
+    line-height: 1.6;
+}
+
+#somos-proya .img-container {
+    background-image: linear-gradient(0deg, rgba(0,0,0,0.7),rgba(0,0,0,0.4)),url('media/somos-proya.jpg');
+    background-size: cover;
+    background-position:  center;
+    height: 400px;
+    width: 300px;
+    box-shadow: 3px 3px 50px black;
+    border-radius: 50px;
+}
+
+#nuestros-programas .programas {
+    display: flex;
+}
+
+#nuestros-programas p {
+    display: block;
+    margin-bottom: 50px;
+}
+
+#nuestros-programas h3 {
+    margin-top: 0;
+    text-shadow: 3px 3px 12px black;
+}
+
+#nuestros-programas .carta {
+    padding: 20px;
+}
+
+.final {
+    height: 95vh;
+}
+
+.final h2 {
+    font-size: 6vw;
+}
+
+.final button {
+    font-size: 2.5vw;
+}
+
+}
